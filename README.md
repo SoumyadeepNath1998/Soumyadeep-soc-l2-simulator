@@ -11,23 +11,25 @@ An enterprise-grade Level 2 Security Operations Center (SOC) simulation and orch
 
 ## Operational Architecture
 
+```text
 [Inbound Threat Vectors / Telemetry Streams]
-├── Shared Mailbox (Phishing / Identity Anomaly)
-├── SOAR Alert Stream (TAP Ingestion / Outage Failover)
-└── Hardware / Removable Media Ingestion
-│
-▼
-[Tier-2 SOC Investigation Orchestrator]
-├── Chronicle UDM + EDR Behavioral Correlation
-├── BlueCat IPAM Subnet & Blast Radius Attribution
-└── CrowdStrike RTR Console & Removable Drive Forensics
-│
-▼
-[Operational Actions & Governance]
-┌─────────────────────┼─────────────────────┐
-▼                     ▼                     ▼
+  ├── Shared Mailbox (Phishing / Identity Anomaly)
+  ├── SOAR Alert Stream (TAP Ingestion / Outage Failover)
+  └── Hardware / Removable Media Ingestion
+                        │
+                        ▼
+       [Tier-2 SOC Investigation Orchestrator]
+  ├── Chronicle UDM + EDR Behavioral Correlation
+  ├── BlueCat IPAM Subnet & Blast Radius Attribution
+  └── CrowdStrike RTR Console & Removable Drive Forensics
+                        │
+                        ▼
+        [Operational Actions & Governance]
+  ┌─────────────────────┼─────────────────────┐
+  ▼                     ▼                     ▼
 [Incident RCA Dossier] [Weekly Tuning Engine] [Shift Governance]
 (NIST SP 800-61r2)     (FP Noise Reduction)   (SLA / Client Dispatch)
+```
 
 
 ---
